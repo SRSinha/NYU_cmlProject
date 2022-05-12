@@ -1,1 +1,3 @@
-# NYU_cmlProject
+## Multi-Modal Multi Environment Performance Comparison on Google Cloud PlatformCML | Project - NYU Cloud and Machine Learning
+
+In recent years, due to the enormous amount of data, and the advancements in Big Data and Machine Learning Applications, Cloud Computing has become ubiquitous. Most of the applications in today’s world are deployed to the cloud so that they can easily be scaled and accessed by the end-users. Along with deploying the applications in the bare Virtual Machines, the advent of containerized Software has given the developers a hard time to choose the environment where they should deploy their applications. There are different kinds of applications and Machine Learning workloads and it becomes very important to choose the best environment where the application should be deployed for maximum resource utilization.
