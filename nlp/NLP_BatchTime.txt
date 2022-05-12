@@ -1,0 +1,25 @@
+Batch Size 16
+real	0m4.746s
+user	0m3.168s
+sys	0m1.780s
+
+Batch Size 32 
+real	0m3.973s
+user	0m2.775s
+sys	0m1.385s
+
+Batch Size 64
+real	0m3.898s
+user	0m2.705s
+sys	0m1.388s
+
+Batch Size 128
+real	0m3.860s
+user	0m2.767s
+sys	0m1.290s
+
+Batch Size 256
+
+real	0m3.835s
+user	0m2.739s
+sys	0m1.287s
