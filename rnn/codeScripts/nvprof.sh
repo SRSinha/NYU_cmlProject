@@ -10,7 +10,7 @@ BATCH=$1
 rm -rf ../../../$BATCH
 mkdir ../../../$BATCH
 # CMD="/opt/conda/bin/python3 main.py --epochs 1 --batch-size $BATCH"
-CMD="python3 main.py --epochs 1 --batch-size $BATCH"
+CMD="python3 rnnMain.py --epochs 1 --batch-size $BATCH"
 # METRICS="dram__bytes_write.sum,dram__bytes_read.sum,smsp__sass_thread_inst_executed_op_fadd_pred_on.sum,smsp__sass_thread_inst_executed_op_fmul_pred_on.sum,smsp__sass_thread_inst_executed_op_ffma_pred_on.sum"
 NVPROF_METRICS="warp_execution_efficiency,dram_read_transactions,dram_write_transactions,dram_read_throughput,dram_write_throughput,flop_count_dp,flop_count_sp,flop_count_hp,dram_utilization,sysmem_utilization,tex_cache_hit_rate"
 

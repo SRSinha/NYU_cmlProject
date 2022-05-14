@@ -1,0 +1,33 @@
+DTOH
+
+HTOD
+947.93us 10 94.792us 1.6640us 900.38us [CUDA memcpy
+Cuda memset
+15.840us 4 3.9600us 3.7440us 4.5760us [CUDA memset]
+*******************************
+warp_execution_efficiency
+99
+*******************************
+dram_read_transactions
+653314
+*******************************
+dram_write_transactions
+955982
+*******************************
+dram_read_throughput
+272
+*******************************
+dram_write_throughput
+199
+*******************************
+FLOPS
+1404387328
+*******************************
+dram_utilization
+High Mid High Low Low
+*******************************
+sysmem_utilization
+Low Low Low Low Low
+*******************************
+tex_cache_hit_rate
+20
