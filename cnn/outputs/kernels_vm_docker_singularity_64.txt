@@ -1,4 +1,4 @@
-********** VM **********
+******************** VM ********************
 cudnn::detail::implicit_convolve_sgemm
 
 cudnn::winograd_nonfused::winogradForwardOutput4x4
@@ -15,7 +15,10 @@ _ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_84_GLOBAL__N__60_tmpxft_
 
 
 
-********** Docker **********
+
+
+
+******************** Docker ********************
 volta_scudnn_128x64_relu_medium_nn_v1
 
 _ZN2at6native18elementwise_kernelILi128ELi2EZNS0_15gpu_kernel_implINS0_13BinaryFunctorIfffNS0_10AddFunctorIfEEEE
@@ -27,3 +30,17 @@ volta_scudnn_128x32_relu_interior_nn_v1
 
 _ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_84_GLOBAL__N__60_tmpxft_000071be_00000000_21_TensorCompare_compute_86_cpp1_ii_d0af11f719launch_clamp_scalarERNS_18TensorIteratorBaseEN3c106ScalarES6_NS0_6detail11ClampLimitsEENKUlvE_clEvENKUlvE6_clEvEUlfE_NS_6detail5ArrayIPcLi2EEEEEviT0_T1_
 
+
+
+
+
+******************** Singularity ********************
+_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_15gpu_kernel_implINS0_13BinaryFunctorIfffNS0_10AddFunctorIfEEEEEEvRNS_18TensorIteratorBaseERKT_EUliE_EEviT1_
+
+volta_scudnn_128x32_relu_interior_nn_v1
+
+_ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_84_GLOBAL__N__60_tmpxft_000071be_00000000_21_TensorCompare_compute_86_cpp1_ii_d0af11f719launch_clamp_scalarERNS_18TensorIteratorBaseEN3c106ScalarES6_NS0_6detail11ClampLimitsEENKUlvE_clEvENKUlvE6_clEvEUlfE_NS_6detail5ArrayIPcLi2EEEEEviT0_T1_
+
+cask_cudnn::computeOffsetsKernel
+
+volta_scudnn_128x64_relu_medium_nn_v1

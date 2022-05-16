@@ -1,0 +1,68 @@
+Singularity> cat nvprof-gpusum-64.log 
+==23048== NVPROF is profiling process 23048, command: python3 mnist.py --epochs 1 --batch-size 64
+==23048== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==23048== Profiling application: python3 mnist.py --epochs 1 --batch-size 64
+==23048== Profiling result:
+==23048== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: _ZN2at6native18elementwise_kernelILi128ELi2EZNS0_15gpu_kernel_implINS0_13BinaryFunctorIfffNS0_10AddFunctorIfEEEEEEvRNS_18TensorIteratorBaseERKT_EUliE_EEviT1_
+          9                 warp_execution_efficiency                     Warp Execution Efficiency     100.00%     100.00%     100.00%
+          9                    dram_read_transactions               Device Memory Read Transactions      172705      295071      281374
+          9                   dram_write_transactions              Device Memory Write Transactions      172554      306207      283567
+          9                      dram_read_throughput                 Device Memory Read Throughput  283.79GB/s  315.47GB/s  311.09GB/s
+          9                     dram_write_throughput                Device Memory Write Throughput  283.54GB/s  327.13GB/s  313.52GB/s
+          9                             flop_count_dp   Floating Point Operations(Double Precision)           0           0           0
+          9                             flop_count_sp   Floating Point Operations(Single Precision)     2768896     4718592     4501959
+          9                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          9                          dram_utilization                     Device Memory Utilization    High (7)    High (8)    High (7)
+          9                        sysmem_utilization                     System Memory Utilization     Low (1)     Low (1)     Low (1)
+          9                        tex_cache_hit_rate                        Unified Cache Hit Rate      11.01%      11.03%      11.02%
+    Kernel: volta_scudnn_128x32_relu_interior_nn_v1
+          1                 warp_execution_efficiency                     Warp Execution Efficiency     100.00%     100.00%     100.00%
+          1                    dram_read_transactions               Device Memory Read Transactions        6851        6851        6851
+          1                   dram_write_transactions              Device Memory Write Transactions      181398      181398      181398
+          1                      dram_read_throughput                 Device Memory Read Throughput  11.784GB/s  11.784GB/s  11.784GB/s
+          1                     dram_write_throughput                Device Memory Write Throughput  312.00GB/s  312.00GB/s  312.00GB/s
+          1                             flop_count_dp   Floating Point Operations(Double Precision)           0           0           0
+          1                             flop_count_sp   Floating Point Operations(Single Precision)    35995648    35995648    35995648
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          dram_utilization                     Device Memory Utilization     Mid (4)     Mid (4)     Mid (4)
+          1                        sysmem_utilization                     System Memory Utilization     Low (1)     Low (1)     Low (1)
+          1                        tex_cache_hit_rate                        Unified Cache Hit Rate      29.14%      29.14%      29.14%
+    Kernel: _ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_84_GLOBAL__N__60_tmpxft_000071be_00000000_21_TensorCompare_compute_86_cpp1_ii_d0af11f719launch_clamp_scalarERNS_18TensorIteratorBaseEN3c106ScalarES6_NS0_6detail11ClampLimitsEENKUlvE_clEvENKUlvE6_clEvEUlfE_NS_6detail5ArrayIPcLi2EEEEEviT0_T1_
+          1                 warp_execution_efficiency                     Warp Execution Efficiency     100.00%     100.00%     100.00%
+          1                    dram_read_transactions               Device Memory Read Transactions      173070      173070      173070
+          1                   dram_write_transactions              Device Memory Write Transactions      162636      162636      162636
+          1                      dram_read_throughput                 Device Memory Read Throughput  308.60GB/s  308.60GB/s  308.60GB/s
+          1                     dram_write_throughput                Device Memory Write Throughput  289.99GB/s  289.99GB/s  289.99GB/s
+          1                             flop_count_dp   Floating Point Operations(Double Precision)           0           0           0
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          dram_utilization                     Device Memory Utilization    High (8)    High (8)    High (8)
+          1                        sysmem_utilization                     System Memory Utilization     Low (1)     Low (1)     Low (1)
+          1                        tex_cache_hit_rate                        Unified Cache Hit Rate       0.00%       0.00%       0.00%
+    Kernel: void cask_cudnn::computeOffsetsKernel<bool=0, bool=0>(cask_cudnn::ComputeOffsetsParams)
+          9                 warp_execution_efficiency                     Warp Execution Efficiency      95.67%      96.44%      95.76%
+          9                    dram_read_transactions               Device Memory Read Transactions           0          83          33
+          9                   dram_write_transactions              Device Memory Write Transactions           0          50           8
+          9                      dram_read_throughput                 Device Memory Read Throughput  0.00000B/s  701.85MB/s  277.45MB/s
+          9                     dram_write_throughput                Device Memory Write Throughput  0.00000B/s  414.64MB/s  69.362MB/s
+          9                             flop_count_dp   Floating Point Operations(Double Precision)           0           0           0
+          9                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          9                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          9                          dram_utilization                     Device Memory Utilization    Idle (0)     Low (1)    Idle (0)
+          9                        sysmem_utilization                     System Memory Utilization     Low (1)     Low (1)     Low (1)
+          9                        tex_cache_hit_rate                        Unified Cache Hit Rate       0.00%       0.00%       0.00%
+    Kernel: volta_scudnn_128x64_relu_medium_nn_v1
+          8                 warp_execution_efficiency                     Warp Execution Efficiency     100.00%     100.00%     100.00%
+          8                    dram_read_transactions               Device Memory Read Transactions      175557      179223      177055
+          8                   dram_write_transactions              Device Memory Write Transactions      292959      294815      294287
+          8                      dram_read_throughput                 Device Memory Read Throughput  38.494GB/s  39.341GB/s  38.856GB/s
+          8                     dram_write_throughput                Device Memory Write Throughput  64.225GB/s  65.078GB/s  64.583GB/s
+          8                             flop_count_dp   Floating Point Operations(Double Precision)           0           0           0
+          8                             flop_count_sp   Floating Point Operations(Single Precision)  1363673088  1363673088  1363673088
+          8                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          8                          dram_utilization                     Device Memory Utilization     Low (2)     Low (2)     Low (2)
+          8                        sysmem_utilization                     System Memory Utilization     Low (1)     Low (1)     Low (1)
+          8                        tex_cache_hit_rate                        Unified Cache Hit Rate      59.76%      64.64%      62.03%
