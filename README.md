@@ -89,3 +89,28 @@ sh nvprof.sh 64
 sh nsys.sh 64
 ```
 6. Outputs would be generated in the folder name $BATCH_SIZE, here 64
+
+
+# Running the Application
+
+## Setup & Installtion
+
+Make sure you have the latest version of Python installed.
+
+```bash
+git clone <repo-url>
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running The App
+
+```bash
+python main.py
+```
+
+## Viewing The App
+
+Go to `http://127.0.0.1:8000`
