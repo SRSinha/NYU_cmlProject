@@ -1,0 +1,87 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<!-- <h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form> -->
+<div class="row text-center h-100" style="margin-bottom: 5%;">
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img class="card-img-top" style="padding: 2%" src="../static/images/train.gif" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Train the Model</h5>
+        <p class="card-text">
+          Users can train the two models we have used i.e., pytorch's MNIST
+          digit classification and Sentiment analysis using Recurrent
+          Neural Networks. Users can select the batch size and the number of epochs
+          and the model would be trained in real time and display the useful
+          metrics like throughput, memory, Total FLOPS, time etc.
+        </p>
+
+        <a href="/train" class="btn btn-outline-primary btn-sm">
+          Train Model
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">
+          <i class="fa fa-line-chart"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img class="card-img-top" style="padding: 2%" src="../static/images/mnist.png" alt="">
+      <div class="card-body">
+        <h5 class="card-title">MNIST Digit Prediction</h5>
+        <p class="card-text">
+          We have trained our model taken from pytorch GitHub repository
+          for 10 epochs and saved it. We have created a user interface
+          which allows users to upload an image from the MNIST image
+          dataset and the request gets sent to the model. The model replies
+          with a digit which we shown in our Interface. This is an example of
+          end-to-end deployment.
+        </p>
+
+        <a href="/mnist" class="btn btn-outline-primary btn-sm">
+          Try it
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">
+          <i class="fa fa-lightbulb-o"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img class="card-img-top" style="padding: 2%; " src="../static/images/sentiment_analysis.png" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Sentiment analyzer</h5>
+        <p class="card-text">
+          Sentiment analysis uses Recurrent neural Networks. This is the second
+          model we took for comparison purpose. We have saved the model as a .pt
+          file and have exposied it to the outside world. Users can just enter a
+          sentence from our interface and the model will output the sentiment positive, negative, or neutral
+          which would be shown on this interface.
+        </p>
+
+        <a href="/sentiment" class="btn btn-outline-primary btn-sm">
+          Sentiment analysis
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">
+          <i class="fa fa-smile-o"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

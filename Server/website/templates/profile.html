@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1> Profile</h1>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td><b>Name</b></td>
+            <td>{{user.first_name}}</td>
+        </tr>
+        <tr>
+            <td><b>E-mail</b></td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1> Sentiment History</h1>
+<!-- <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul> -->
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sentiment</th>
+            <th scope="col">Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sentiment in user.sentiments %}
+        <tr>
+            <td>{{sentiment.sentence}}</td>
+            <td>{{sentiment.score}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

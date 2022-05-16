@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<script type="text/javascript">
+    console.log("Hello")
+</script>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div id="loading"></div>
+    </div>
+</div>
+<div id="content">
+    <form action="{{ url_for('views.train') }}" method="POST">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col">Batch Size</th>
+                    <th scope="col">Epochs</th>
+                    <th scope="col">Environment</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MNIST</td>
+                    <td><input name="batch" id="batch" class="form-control" value="64" type="number"></td>
+                    <td><input name="epochs" id="epochs" class="form-control" value="1" type="number" disabled></td>
+                    <td>Virtual Machine</td>
+                    <td><button type="submit" class="btn btn-primary" onclick="loading();">Train</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    {% if showError %}
+    <p><b>You are not authorized to try this service now.</b></p>
+    {% endif %}
+    {% if showResult %}
+    <p>Result of model <b>MNIST</b> for <b>{{batch}}</b> batches and <b>1</b> epochs.</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dram_read_transactions</td>
+                <td>{{read}}</td>
+            </tr>
+            <tr>
+                <td>dram_write_transactions</td>
+                <td>{{write}}</td>
+            </tr>
+            <tr>
+                <td>FLOPS</td>
+                <td>{{flops}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="{{ url_for('views.download', filename=filename) }}">Download the log file</a>
+    {% endif %}
+    <canvas id="myChart" style="height: 30px !important; width: 100px !important"></canvas>
+</div>
+{% endblock %}
