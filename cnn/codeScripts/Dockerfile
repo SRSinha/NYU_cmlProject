@@ -1,4 +1,4 @@
-ROM pytorch/pytorch
+FROM pytorch/pytorch
 RUN apt-get update
 USER root
 
