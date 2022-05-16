@@ -1,0 +1,34 @@
+Train size 500                                                                                                                        1,1           All
+DTOH
+24.992us 16 1.5620us 1.3440us 2.3680us [CUDA memcpy
+HTOD
+121.28us 21 5.7750us 1.1840us 54.400us [CUDA memcpy
+Cuda memset
+27.520us 8 3.4400us 3.2960us 3.7760us [CUDA memset]
+*******************************
+warp_execution_efficiency
+89
+*******************************
+dram_read_transactions
+1318333
+*******************************
+dram_write_transactions
+753598
+*******************************
+dram_read_throughput
+104
+*******************************
+dram_write_throughput
+113
+*******************************
+FLOPS
+651965536
+*******************************
+dram_utilization
+Low Idle Low Idle Low Low Low Low Low Low Low Idle Low Low Low Low Low Low Low Low Idle Low Low Mid Low Idle Mid Low Low Low Idle Low Low Idle Low Low Low Low Low Low Low Mid Low Mid
+*******************************
+sysmem_utilization
+Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low Low
+*******************************
+tex_cache_hit_rate
+6
